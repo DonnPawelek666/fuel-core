@@ -14,6 +14,7 @@ pub mod address;
 pub mod asset_id;
 pub mod column;
 pub mod compressed_blocks;
+pub mod compressed_blocks_roots;
 pub mod contract_id;
 pub mod evictor_cache;
 pub mod predicate_code;
@@ -46,5 +47,8 @@ pub type RegistryIndex = Merkleized<registry_index::RegistryIndex>;
 /// Merkleized Timestamps table type alias
 pub type Timestamps = Merkleized<timestamps::Timestamps>;
 
-/// Re-export to match api
-pub use compressed_blocks::CompressedBlocks;
+/// Merkleized compressed blocks table type alias
+pub type CompressedBlocks = Merkleized<compressed_blocks::CompressedBlocks>;
+
+/// re-exported compressed block roots index
+pub use compressed_blocks_roots::CompressedBlocksRoots;
