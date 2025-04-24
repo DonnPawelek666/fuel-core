@@ -7,6 +7,8 @@ use crate::{
 };
 use fuel_core_storage::{
     self,
+    StorageAsMut,
+    StorageSize,
     kv_store::KeyValueInspect,
     merkle::column::MerkleizedColumn,
     not_found,
@@ -14,8 +16,6 @@ use fuel_core_storage::{
         Modifiable,
         StorageTransaction,
     },
-    StorageAsMut,
-    StorageSize,
 };
 
 /// Compressed block type alias
